@@ -6,8 +6,7 @@
 - [ ] Regrade	
 - [ ] Status	
 - [ ] Game is playable	
-- [ ] Game is multiplayer 
-(or AI or PVE)
+- [ ] Game is multiplayer (or AI or PVE)
 - [ ] Game is winnable	
 - [ ] Winner/score is displayed (NO ALERTS)	
 - [ ] Has directions - How to Play	
