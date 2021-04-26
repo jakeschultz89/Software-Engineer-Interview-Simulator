@@ -1,46 +1,4 @@
-# Software Engineer Interview Simulator
-
-Explanation of the game that was built and the deployed link will go here.
-
-# HOW TO PLAY
-
-Congratulations, you have been selected for an interview at the hottest tech company in your area! Before offering you a fulltime position, you will need to complete an interview. The interview consists of ten questions relating to HTML, CSS and JavaScript. 
-
-Depending on how well you perform, you may be offered the job! 
-
-1) Begin the game by clicking "Start the Interview".
-2) You will see the first question and the timer will start. For each question you will get a new ten second timer. Answer the question before the timer runs out or it counts as an incorrect response.
-3) Score 0 - 4 points and you will be denied the job. Score 5 - 7 points and you will be offerer the job. Score 8 - 10 points and you will be offered the job AND a higher salary!
-
-## Start Up Screen:
-Images of the start up screen go here 
-
-# HOW TO INSTALL
-
-## Example
-1. *`Fork`* and *`Clone`* this respository to your local machine
-2. Open `index.html` in your browser to play or 
-3. Open the directory in your text editor of choice to view or edit the code
-
-Other install instructions will go here
-
-
-# HOW IT WORKS
-How the game works will go here
-Code snippets go here
-
-
-# FUTURE CONSIDERATIONS
-
-Future considerations or stretch goals go here.
-
-
-# PROCESS WORK
-
-## Initial Wireframes:
-Initial Wireframes go here ( images )
-
-```let questions = [
+let questions = [
     {
     question: "How can you make a numbered list?",
     choiceA: "<ol>",
@@ -121,8 +79,3 @@ Initial Wireframes go here ( images )
     correct: "C",
     },
 ]
-```
-
-## Scratch Work:
-
-Scratch Work goes here

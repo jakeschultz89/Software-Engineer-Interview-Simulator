@@ -1,6 +1,6 @@
 # Requirements
-- [ ] Name	
-- [ ] Game Name	
+- [X] Name	
+- [X] Game Name	
 - [ ] Github Link
 - [ ] Live Site	
 - [ ] Regrade	
