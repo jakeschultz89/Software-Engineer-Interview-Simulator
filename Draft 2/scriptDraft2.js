@@ -1,9 +1,26 @@
-let questions = [
+let lastQuestionIndex = questions.length - 1;
+let runningQuestionIndex = 0;
+
+function renderQuestion(O){
+    let q = questions[runningQuestionIndex];
+    qImg.innerHTML = '<img src=' + q.imgSrc + '>';
+    questionContainerElement.innerHTML = '<p>' + q.question + '</p>';
+    choiceA.innerHTML = q.choiceA;
+    choiceB.innerHTML = q.choiceB;
+    choiceC.innerHTML = q.choiceC;
+}
+
+
+
+
+
+const questions = [
     {
     question: "How can you make a numbered list?",
     choiceA: "<ol>",
     choiceB: "<ul>",
-    choice: "<list>",
+    choiceC: "<list>",
+    choiceD: "<nl>",
     correct: "A",
     },
 
@@ -12,6 +29,7 @@ let questions = [
     choiceA: "<textinput type='text'>",
     choiceB: "<input type='textfield'>",
     choiceC: "<input type='text'>",
+    choiceD: "<textfield>",
     correct: "C",
     },
 
@@ -20,6 +38,7 @@ let questions = [
     choiceA: "In the <head> section",
     choiceB: "In the <body> section",
     choiceC: "At the end of the document",
+    choiceD: "It automatically connects",
     correct: "A",
     },
 
@@ -28,6 +47,7 @@ let questions = [
     choiceA: "#demo",
     choiceB: "demo",
     choiceC: ".demo",
+    choiceD: "id-demo",
     correct: "A",
     },
 
@@ -36,6 +56,7 @@ let questions = [
     choiceA: "#test",
     choiceB: "*test",
     choiceC: ".test",
+    choiceD: "test {}",
     correct: "C",
     },
 
@@ -44,6 +65,7 @@ let questions = [
     choiceA: "font:bold;",
     choiceB: "font-weight:bold;",
     choiceC: "style:bold;",
+    choiceD: "font-style: thicc bois;",
     correct: "B",
     },
 
@@ -52,6 +74,7 @@ let questions = [
     choiceA: "while i = 1 to 10",
     choiceB: "while (i <= 10)",
     choiceC: "while (i <= 10; i++)",
+    choiceD: "while i = (i++)",
     correct: "B",
     },
 
@@ -60,6 +83,7 @@ let questions = [
     choiceA: "myFunction()",
     choiceB: "call myFunction()",
     choiceC: "call function myFunction()",
+    choiceD: "Hey Siri, call myFunction",
     correct: "A",
     },
 
@@ -68,6 +92,7 @@ let questions = [
     choiceA: "function = exampleFunction()",
     choiceB: "function:exampleFunction()",
     choiceC: "function exampleFunction() ",
+    choiceD: "function.create",
     correct: "C",
     },
 
@@ -76,6 +101,7 @@ let questions = [
     choiceA: "let colors = 'red', 'green', 'blue'",
     choiceB: "let colors = (1:'red', 2:'green', 3:'blue')",        
     choiceC: "let colors = ['red', 'green', 'blue']",
+    choiceD: "let array colors = 'red', 'green', blue'",
     correct: "C",
     },
 ]
