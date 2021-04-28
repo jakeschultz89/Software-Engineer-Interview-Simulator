@@ -1,5 +1,5 @@
-const question = document.querySelector("#question");
-const choices = document.querySelectorAll(".choice-text");
+const question = document.querySelector("#question"); //querySelector makes it so I can target id or class.
+const choices = Array.from(document.querySelectorAll(".choice-text")); //this targets the text of the answer choices
 const progressText = document.querySelector("#progressText");
 const scoreText = document.querySelector("#score");
 const progressBarFull = document.querySelector("#progressBarFull");
@@ -21,7 +21,7 @@ let questions = [
     },
   
     {
-      question: "What is the answer HTML for making a text input field?",
+      question: "What is the correct HTML for making a text input field?",
       choice1: "<textinput type='text'>",
       choice2: "<input type='textfield'>",
       choice3: "<input type='text'>",
@@ -100,11 +100,11 @@ let questions = [
       choice3: "let colors = ['red', 'green', 'blue']",
       choice4: "let array colors = 'red', 'green', blue'",
       answer: 3,
-    },
+    }
   ];
 
   const SCORE_POINTS = 100;
-  const MAX_QUESTIONS = 4;
+  const MAX_QUESTIONS = 10;
 
   startGame = () => {
       questionCounter = 0;

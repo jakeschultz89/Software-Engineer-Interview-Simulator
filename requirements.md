@@ -7,8 +7,8 @@
 - [ ] Status	
 - [ ] Game is playable	
 - [ ] Game is multiplayer (or AI or PVE)
-- [ ] Game is winnable	
-- [ ] Winner/score is displayed (NO ALERTS)	
+- [X] Game is winnable	
+- [X] Winner/score is displayed (NO ALERTS)	
 - [ ] Has directions - How to Play	
 - [ ] Readme.md included and filled out	
 - [ ] Appropriate Use of GitHub (`commits`) 	
