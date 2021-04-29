@@ -1,6 +1,6 @@
 # Software Engineer Interview Simulator
 
-Explanation of the game that was built and the deployed link will go here.
+https://jakeschultz89.github.io/Software-Engineer-Interview-Simulator/
 
 # HOW TO PLAY
 

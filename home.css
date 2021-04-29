@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 body {
     /* background-image: url("background-image.jpg");
     background-size: cover; */
@@ -25,6 +26,8 @@ img {
     max-height: 400px;
     max-width: 500px;
     padding-bottom: 25px;
+    filter: opacity(90%);
+    filter: color rgb(14, 245, 6);
 }
 
 h4 {
@@ -40,6 +43,21 @@ h2 {
     margin-bottom: 4rem;
 }
 
+h3 {
+    display: flex;
+    flex-direction: column;
+    min-height: 5vh;
+    font-size: 3.5rem;
+    color: rgb(14, 245, 6);
+    background: black;
+    text-align: justify;
+    margin-top: 100px;
+    
+}
+
+#tryAgain {
+    margin-top: 50px;
+}
 .container {
     width: 100vw;
     height: 100vh;
