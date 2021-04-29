@@ -5,15 +5,15 @@
 - [ ] Live Site	
 - [ ] Regrade	
 - [ ] Status	
-- [ ] Game is playable	
+- [X] Game is playable	
 - [ ] Game is multiplayer (or AI or PVE)
 - [X] Game is winnable	
 - [X] Winner/score is displayed (NO ALERTS)	
 - [ ] Has directions - How to Play	
-- [ ] Readme.md included and filled out	
-- [ ] Appropriate Use of GitHub (`commits`) 	
+- [X] Readme.md included and filled out	
+- [X] Appropriate Use of GitHub (`commits`) 	
 - [ ] Deployed on Github Pages	
 - [ ] DRY (Do Not Repeat Yourself) Code, Good Code Style	
-- [ ] Effort Put into Styling	
-- [ ] Reset button	
+- [X] Effort Put into Styling	
+- [X] Reset button	
 - [ ] Good collision detection/event triggers

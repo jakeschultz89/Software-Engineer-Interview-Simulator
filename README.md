@@ -48,8 +48,6 @@ Future considerations or stretch goals go here.
 # Result Screen Example
 ![Result-Screen](result-wireframe.png)
 
-
-
 # Original Array Info
 ```let questions = [
     {
