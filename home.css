@@ -179,8 +179,14 @@ h3 {
     width: 0%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 375px) {
+   
+    * {
+        max-width: 350px;
+        max-height: 800px;
+    }
+   
     .choice-container {
-        min-width: 40rem;
+        min-width: 300px;
     }
 }
