@@ -40,13 +40,13 @@ Future considerations or stretch goals go here.
 ## Initial Wireframes:
 
 # Homescreen
-![Home-Screen](/images/homescreen-wireframe.png)
+![Home-Screen](homescreen-wireframe.png)
 
 # Question Screen Example
-![Question-Screen](/images/question-wireframe.png)
+![Question-Screen](question-wireframe.png)
 
 # Result Screen Example
-![Result-Screen](/images/result-wireframe.png)
+![Result-Screen](result-wireframe.png)
 
 
 

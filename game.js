@@ -103,13 +103,13 @@ let questions = [
     }
   ];
 
-  const SCORE_POINTS = 100;
+  const SCORE_POINTS = 10000;
   const MAX_QUESTIONS = 10;
 
   startGame = () => {
-      questionCounter = 0;
-      score = 0;
-      availableQuestions = [...questions];
+      questionCounter = 0; //counter will start at 0(empty)
+      score = 0; //score will always start back at 0 points
+      availableQuestions = [...questions]; // the game will pull from the array of questions
       getNewQuestion();
   }
 
@@ -117,7 +117,7 @@ let questions = [
       if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
           localStorage.setItem("mostRecentScore", score);
 
-          return window.location.assign('/end.html');
+          return window.location.assign('end.html');
       }
       questionCounter++
       progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
@@ -145,7 +145,7 @@ let questions = [
           const selectedChoice = e.target
           const selectedAnswer = selectedChoice.dataset["number"]
 
-          let classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect"
+          let classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect" //delete this
 
           if(classToApply === "correct") {
               incrementScore(SCORE_POINTS)
