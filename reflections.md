@@ -26,9 +26,9 @@
 - [x] What did you achieve yesterday?
 - [x] What are your goals for today?
 - [x] Do you have any blockers?
-1. RESPONSE
-2. RESPONSE
-3. RESPONSE
+1. I got the HTML pages linked and got the code snippits to show.
+2. Today is the day, need to finish it all up.
+3. Right now I cannot get the score to show on the final page and I have not yet gotten the timer put in.
 
 # Thursday
 - [x] What did you achieve yesterday?
