@@ -9,7 +9,7 @@
 - [ ] Game is multiplayer (or AI or PVE)
 - [X] Game is winnable	
 - [X] Winner/score is displayed (NO ALERTS)	
-- [ ] Has directions - How to Play	
+- [X] Has directions - How to Play	
 - [X] Readme.md included and filled out	
 - [X] Appropriate Use of GitHub (`commits`) 	
 - [X] Deployed on Github Pages	

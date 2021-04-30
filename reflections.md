@@ -34,9 +34,9 @@
 - [x] What did you achieve yesterday?
 - [x] What are your goals for today?
 - [x] Do you have any blockers?
-1. RESPONSE
-2. RESPONSE
-3. RESPONSE
+1. Yesterday I finished the functioning game.
+2. Today I am going to present.
+3. Still cannot get the final score to show.
 
 # Friday
 - [x] What did you achieve yesterday?

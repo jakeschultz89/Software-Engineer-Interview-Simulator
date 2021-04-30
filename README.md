@@ -35,16 +35,17 @@ https://jakeschultz89.github.io/Software-Engineer-Interview-Simulator/
 
 # HOW IT WORKS
 ```javascript
-const question = document.querySelector("#question");
-const choices = Array.from(document.querySelectorAll(".choice-text")); 
-const progressText = document.querySelector("#progressText"); 
-const scoreText = document.querySelector("#score");
+const question = document.querySelector("#question"); //querySelector makes it so I can target id or class.
+const choices = Array.from(document.querySelectorAll(".choice-text")); //this targets the text of the answer choices.
+const progressText = document.querySelector("#progressText"); //this targets the text that will show question 1 of 10, 2 of 10, etc.
+const scoreText = document.querySelector("#score"); // scoreText will be used in the HUD and end page.
+// const finalScore = document.querySelector('#finalScore'); //final score to be displayed on end.html
 
-let currentQuestion = {}; 
+let currentQuestion = {}; //makes currentQuestion an empty opject that can be manipulated later.
 let acceptingAnswers = true; 
-let score = 0; 
-let questionCounter = 0; 
-let availableQuestions = []; 
+let score = 0; //establishing score as a number
+let questionCounter = 0; //question counter will be a number
+let availableQuestions = []; //the available questions are in an array
 
 let questions = [
     {
@@ -139,62 +140,62 @@ let questions = [
     }
   ];
 
-  const SCORE_POINTS = 10000; 
-  const MAX_QUESTIONS = 10; 
+  const SCORE_POINTS = 10000; //each question correct will award the player with 10,000 points
+  const MAX_QUESTIONS = 10; //the game will run for a total of 10 questions
 
-  startGame = () => { 
-      questionCounter = 0; 
-      score = 0; 
-      availableQuestions = [...questions]; 
-      getNewQuestion(); 
+  startGame = () => { // function for starting the game
+      questionCounter = 0; //counter will start at 0(empty)
+      score = 0; //score will always start back at 0 points
+      availableQuestions = [...questions]; // spread operator - the game will pull from the array of questions
+      getNewQuestion(); //present a question
   }
 
-  getNewQuestion = () => { 
-      if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) { 
-          localStorage.setItem("mostRecentScore", score); 
+  getNewQuestion = () => { //function for getting the questions
+      if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) { //if there are no more questions
+          localStorage.setItem("mostRecentScore", score); //the score is saved to local storage
 
-          return window.location.assign('end.html'); 
+          return window.location.assign('end.html'); //score is displayed on end.html
       }
-      questionCounter++ 
-      progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS} `; 
+      questionCounter++ // as each question is asked
+      progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS} `; //shows a counter for the player to know which question they are currently on.
 
-      const questionsIndex = Math.floor(Math.random() * availableQuestions.length); 
-      currentQuestion = availableQuestions[questionsIndex]; 
-      question.innerText = currentQuestion.question; 
+      const questionsIndex = Math.floor(Math.random() * availableQuestions.length); //this makes it so that the questions are asked in random order each time.
+      currentQuestion = availableQuestions[questionsIndex]; // keeps track of which question we are on
+      question.innerText = currentQuestion.question; //this tells the game which question to show
 
-      choices.forEach(choice => { 
-          const number = choice.dataset["number"]; 
+      choices.forEach(choice => { //function for showing the array choices
+          const number = choice.dataset["number"]; //this is what labels the answer in the array as the correct asnwer.
           choice.innerText = currentQuestion["choice" + number];
       })
 
-      availableQuestions.splice(questionsIndex, 1); 
+      availableQuestions.splice(questionsIndex, 1); //this adds/removes the questions from the array to the container.
 
-      acceptingAnswers = true; 
+      acceptingAnswers = true; //?
   }
 
-  choices.forEach(choice => { 
-      choice.addEventListener('click', e => { 
-          if(!acceptingAnswers) return 
+  choices.forEach(choice => { //function for checking answers or choices.
+      choice.addEventListener('click', e => { //this function happens on a click.
+          if(!acceptingAnswers) return //if the click is not on an answer, return, wait for next click.
 
           acceptingAnswers = false
           const selectedChoice = e.target
-          const selectedAnswer = selectedChoice.dataset["number"]  
+          const selectedAnswer = selectedChoice.dataset["number"]  //the right choice is connected to the question by the "number".
 
-          let classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect" 
+          let classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect" //this allows the game to decipher if the answer was right or wrong.
 
-          if(classToApply === "correct") { 
-              incrementScore(SCORE_POINTS) 
+          if(classToApply === "correct") { // if the answer is correct
+              incrementScore(SCORE_POINTS) //add incremental points
           }
 
-          setTimeout(() => { 
+          setTimeout(() => { //this times out so it prompts the new question
               getNewQuestion()
 
-          }, 10) 
+          }, 10) //milliseconds before screen changes.
       })
   })
 
-  incrementScore = num => { 
-      score +=num 
+  incrementScore = num => { //function to increase score
+      score +=num //score + increcement number (10000)
       scoreText.innerText = score 
   }
 
