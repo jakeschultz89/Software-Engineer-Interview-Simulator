@@ -1,8 +1,8 @@
 # Requirements
 - [X] Name	
 - [X] Game Name	
-- [ ] Github Link
-- [ ] Live Site	
+- [X] Github Link
+- [X] Live Site	
 - [ ] Regrade	
 - [ ] Status	
 - [X] Game is playable	
@@ -12,8 +12,8 @@
 - [ ] Has directions - How to Play	
 - [X] Readme.md included and filled out	
 - [X] Appropriate Use of GitHub (`commits`) 	
-- [ ] Deployed on Github Pages	
-- [ ] DRY (Do Not Repeat Yourself) Code, Good Code Style	
+- [X] Deployed on Github Pages	
+- [X] DRY (Do Not Repeat Yourself) Code, Good Code Style	
 - [X] Effort Put into Styling	
 - [X] Reset button	
 - [ ] Good collision detection/event triggers
