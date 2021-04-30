@@ -42,7 +42,13 @@
 - [x] What did you achieve yesterday?
 - [x] What are your goals for today?
 - [x] Do you have any blockers?
-1. RESPONSE
-2. RESPONSE
-3. RESPONSE
+1. Game is finished and playable.
+2. Successful presentation.
+3. Same as before.
+
+1 What HTML, CSS, and or JavaScript skills you learned while building your game?
+    I learned how to connect HTML pages, got more of a grasp on functions and variables.
+
+2 What's one topic you want to spend more practice on?
+    While I learned more about functions, I still REALLY struggle with them. Functions and loops need a lot more practice for me.
 
