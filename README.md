@@ -34,6 +34,271 @@ Click the link below to play directly in your browser:
 https://jakeschultz89.github.io/Software-Engineer-Interview-Simulator/
 
 # HOW IT WORKS
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SE Interview Sim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="home" class="flex-column flex-center">
+            <h1>Software Engineer Interview Simulator</h1>
+            <img src="homescreen.png" alt="">
+            <h4>Try to get as many questions right as you can. Only highscores will land you the job. Good luck!</h4>
+            <a href="game.html" id="startBtn" class="btn">Click Here to Begin the Interview</a>
+            <h4>INSTRUCTIONS: Click an answer to move on to the next question. At the end of game you can see if your score lands you the job.</h4>
+        </div>
+    </div>
+    <script src="script.js"></script>
+```
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SE Interview Sim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio>
+        <source src="music.mp3" type="audtio/mpeg">
+    </audio>
+    <div class="container">
+        <div id="game" class="justify-center flex-column">
+            <div id="hud">
+                <div class="hud-item">
+                    <p id="progressText" class="hud-prefix">
+                        Question
+                    </p>
+                </div>
+                <div class="hud-item">
+                    <p class="hud-prefix">
+                        Score
+                    </p>
+                    <h1 class="hud-main-text" id="score" name="score">
+                         0
+                    </h1>
+                </div>
+            </div>
+            <h1 id="question">What is the answer to this question?</h1>
+            <div class="choice-container">
+                <p class="choice-prefix">A)</p>
+                <p class="choice-text" data-number="1">Choice</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">B)</p>
+                <p class="choice-text" data-number="2">Choice 2</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">C)</p>
+                <p class="choice-text" data-number="3">Choice 3</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">D)</p>
+                <p class="choice-text" data-number="4">Choice 4</p>
+            </div>
+        </div>
+    </div> 
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SE Interview Sim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="end" class="flex-center flex-column">
+            <!-- <h1 id="finalScore">0</h1> -->
+            <h3>80,000 - 100,000 = You got the job AND a higher salary!</h3>
+            <h3>50,000 - 70,000 = You're hired!</h3>
+            <h3>0 - 40,000 = Sorry, you did not get the job.</h3>
+            <a href="index.html" class="btn" id="tryAgain">Try again?</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+```css
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+    background: black;
+    font-family: 'VT323', monospace;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+* {
+    box-sizing: border-box; /* border-box accounts for height and width automatically */
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+}
+
+h1 {
+    font-size: 45px;
+    color: rgb(14, 245, 6);
+    background: black;
+    text-align: center;
+}
+
+img {
+    max-height: 400px;
+    max-width: 500px;
+    margin: 15px 0 15px 0;
+    filter: opacity(90%);
+    filter: color rgb(14, 245, 6);
+}
+
+h4 {
+    font-size: 2.4rem;
+    color: rgb(14, 245, 6);
+    margin-bottom: 5rem;
+    background: black;
+    text-align: center;
+}
+
+h2 {
+    font-size: 4.2rem;
+    margin-bottom: 4rem;
+}
+
+h3 {
+    display: flex;
+    flex-direction: column;
+    min-height: 5vh;
+    font-size: 3.5rem;
+    color: rgb(14, 245, 6);
+    background: black;
+    text-align: justify;
+    margin-top: 100px;
+    
+}
+
+#tryAgain {
+    margin-top: 50px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn {
+    font-size: 2.4rem;
+    padding: 2rem 0;
+    width: 30rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: rgb(14, 245, 6);
+    background: black;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+.choice-container {
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    color: rgb(14, 245, 6);
+    border-radius: 4px;
+    background:none;
+    font-size: 50px;
+    min-width: 80rem;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    transform: transform 100ms; 
+}
+
+.choice-prefix {
+    padding: 2rem 2.5rem;
+    color: rgb(14, 245, 6);
+}
+
+.choice-text {
+    padding: 2rem;
+    width: 100%;
+}
+
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.hud-main-text {
+    text-align: center;
+}
+
+#progressText {
+    color: rgb(14, 245, 6);
+    margin-top: 35px;
+}
+
+@media screen and (max-width: 375px) {
+   
+    * {
+        max-width: 350px;
+        max-height: 800px;
+    }
+   
+    .choice-container {
+        min-width: 300px;
+    }
+}
+```
+
 ```javascript
 const question = document.querySelector("#question"); //querySelector makes it so I can target id or class.
 const choices = Array.from(document.querySelectorAll(".choice-text")); //this targets the text of the answer choices.
@@ -210,6 +475,8 @@ Stretch goals for this project include:
  * Getting a 10 second timer to run for each question.
 
  * Having the end page show a different image depending on what your score was.
+
+ * Get audio to play during the game (NES Ducktales theme)
 
 # PROCESS WORK
 
